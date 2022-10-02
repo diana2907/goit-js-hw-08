@@ -32,7 +32,7 @@ form.addEventListener('submit', onSubmit);
 function onSubmit(evt) {
   evt.preventDefault();
   console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
-  localStorage.clear();
+  localStorage.removeItem(STORAGE_KEY);
   formData.email = '';
   formData.message = '';
   evt.currentTarget.reset();
